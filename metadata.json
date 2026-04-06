@@ -1,0 +1,5 @@
+{
+  "name": "Dehumidifier Inquiry Form",
+  "description": "A form to submit dehumidifier inquiries, sending data via email.",
+  "requestFramePermissions": []
+}
