@@ -81,24 +81,17 @@ export default function App() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm whitespace-nowrap">
               Dehumidifier Inquiry Form
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-white/90 drop-shadow-sm font-medium">
-              Please fill out the form below and we will get back to you shortly.
-            </p>
           </div>
         </div>
 
         <div className="px-6 py-8 sm:px-10 sm:pt-10 sm:pb-2">
           {status === 'success' ? (
-            <div className="text-center py-12">
-              <CheckCircle2 className="mx-auto h-16 w-16 text-green-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-              <p className="text-gray-600 mb-8">Your inquiry has been successfully submitted. We will contact you soon.</p>
-              <button
-                onClick={() => setStatus('idle')}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Submit Another Inquiry
-              </button>
+            <div className="text-center py-24 px-6">
+              <CheckCircle2 className="mx-auto h-24 w-24 text-green-500 mb-8" />
+              <h3 className="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Thank You!</h3>
+              <p className="text-xl text-gray-600 max-w-lg mx-auto leading-relaxed">
+                Your inquiry has been successfully submitted. We will get back to you shortly.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -218,7 +211,7 @@ export default function App() {
 
                 <div>
                   <label htmlFor="height" className="block text-sm font-medium text-gray-700">
-                    Height of the ceiling (m) <span className="text-red-500">*</span>
+                    Height of the ceiling (m)
                   </label>
                   <div className="mt-1">
                     <input
@@ -227,7 +220,6 @@ export default function App() {
                       id="height"
                       min="0"
                       step="any"
-                      required
                       value={formData.height}
                       onChange={handleChange}
                       className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md border p-2.5"

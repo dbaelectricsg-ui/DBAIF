@@ -47,7 +47,7 @@ Contact: ${contact}
 Type of dehumidifier inquire: ${type}
 What is your place used for: ${usage}
 Size of the place (sqm): ${size}
-Height of the ceiling (m): ${height}
+Height of the ceiling (m): ${height || 'N/A'}
 False Ceiling (Y/N): ${falseCeiling}
 Fresh Air inflow (Y/N): ${freshAir}
 Message: ${message || 'N/A'}
@@ -77,7 +77,7 @@ Message: ${message || 'N/A'}
   </tr>
   <tr>
     <td><strong>Height of the ceiling (m)</strong></td>
-    <td>${height}</td>
+    <td>${height || 'N/A'}</td>
   </tr>
   <tr>
     <td><strong>False Ceiling (Y/N)</strong></td>
